@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>D3_Assignment</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="nav">
+      <img
+        src="https://1000logos.net/wp-content/uploads/2023/01/Airbnb-logo.png"
+        alt=""
+        class="logo"
+      />
+
+      <div class="nav-centre">
+        <span class="centre"><a href="#">Anywhere</a></span>
+        <span class="centre1"><a href="">Anyweek</a></span>
+        <span class="centre2"><a href="">Add guests</a></span>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="14"
+          height="14"
+          fill="currentColor"
+          class="bi-search"
+          viewBox="0 0 16 16"
+        >
+          <path
+            d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001q.044.06.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1 1 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0"
+          />
+        </svg>
+      </div>
+      <div class="nav-right">
+        <a href="#">Airbnb your home</a>
+        <svg
+          xmlns="http://www.w3.org/2000/svg"
+          width="20"
+          height="20"
+          fill="currentColor"
+          class="bi-globe2"
+          viewBox="0 0 16 16"
+        >
+          <path
+            d="M0 8a8 8 0 1 1 16 0A8 8 0 0 1 0 8m7.5-6.923c-.67.204-1.335.82-1.887 1.855q-.215.403-.395.872c.705.157 1.472.257 2.282.287zM4.249 3.539q.214-.577.481-1.078a7 7 0 0 1 .597-.933A7 7 0 0 0 3.051 3.05q.544.277 1.198.49zM3.509 7.5c.036-1.07.188-2.087.436-3.008a9 9 0 0 1-1.565-.667A6.96 6.96 0 0 0 1.018 7.5zm1.4-2.741a12.3 12.3 0 0 0-.4 2.741H7.5V5.091c-.91-.03-1.783-.145-2.591-.332M8.5 5.09V7.5h2.99a12.3 12.3 0 0 0-.399-2.741c-.808.187-1.681.301-2.591.332zM4.51 8.5c.035.987.176 1.914.399 2.741A13.6 13.6 0 0 1 7.5 10.91V8.5zm3.99 0v2.409c.91.03 1.783.145 2.591.332.223-.827.364-1.754.4-2.741zm-3.282 3.696q.18.469.395.872c.552 1.035 1.218 1.65 1.887 1.855V11.91c-.81.03-1.577.13-2.282.287zm.11 2.276a7 7 0 0 1-.598-.933 9 9 0 0 1-.481-1.079 8.4 8.4 0 0 0-1.198.49 7 7 0 0 0 2.276 1.522zm-1.383-2.964A13.4 13.4 0 0 1 3.508 8.5h-2.49a6.96 6.96 0 0 0 1.362 3.675c.47-.258.995-.482 1.565-.667m6.728 2.964a7 7 0 0 0 2.275-1.521 8.4 8.4 0 0 0-1.197-.49 9 9 0 0 1-.481 1.078 7 7 0 0 1-.597.933M8.5 11.909v3.014c.67-.204 1.335-.82 1.887-1.855q.216-.403.395-.872A12.6 12.6 0 0 0 8.5 11.91zm3.555-.401c.57.185 1.095.409 1.565.667A6.96 6.96 0 0 0 14.982 8.5h-2.49a13.4 13.4 0 0 1-.437 3.008M14.982 7.5a6.96 6.96 0 0 0-1.362-3.675c-.47.258-.995.482-1.565.667.248.92.4 1.938.437 3.008zM11.27 2.461q.266.502.482 1.078a8.4 8.4 0 0 0 1.196-.49 7 7 0 0 0-2.275-1.52c.218.283.418.597.597.932m-.488 1.343a8 8 0 0 0-.395-.872C9.835 1.897 9.17 1.282 8.5 1.077V4.09c.81-.03 1.577-.13 2.282-.287z"
+          />
+        </svg>
+        <button class="nav-btn">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            height="20"
+            fill="currentColor"
+            class="bi-list"
+            viewBox="0 0 16 16"
+          >
+            <path
+              fill-rule="evenodd"
+              d="M2.5 12a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5m0-4a.5.5 0 0 1 .5-.5h10a.5.5 0 0 1 0 1H3a.5.5 0 0 1-.5-.5"
+            />
+          </svg>
+
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="20"
+            height="20"
+            fill="currentColor"
+            class="bi-person-fill"
+            viewBox="0 0 16 16"
+          >
+            <path
+              d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6"
+            />
+          </svg>
+        </button>
+      </div>
+    </div>
+
+
+
+    <!-- 2nd -->
+
+<div class="slide">
+    <div class="data">
+        <div><img src="i1.jpeg" alt="" class="data-img"></div>
+        <div class="data-name">Countryside</div>
+    </div>
+
+    <div class="data">
+        <div><img src="i2.jpeg" alt="" class="data-img"></div>
+        <div class="data-name">Room</div>
+    </div>
+
+    <div class="data">
+        <div><img src="i3.jpeg" alt="" class="data-img"></div>
+        <div class="data-name">Bed & breakfast</div>
+    </div>
+
+    <div class="data">
+        <div><img src="i4.jpeg" alt="" class="data-img"></div>
+        <div class="data-name">home</div>
+    </div>
+
+    <div class="data">
+        <div><img src="i5.jpeg" alt="" class="data-img"></div>
+        <div class="data-name">Mansion</div>
+    </div>
+
+
+    <div class="data">
+        <div><img src="i6.jpeg" alt="" class="data-img"></div>
+        <div class="data-name">Treehouse</div>
+    </div>
+
+
+    <div class="data">
+        <div><img src="i7.jpeg" alt="" class="data-img"></div>
+        <div class="data-name">Amazing pool</div>
+    </div>
+
+
+    <div class="data">
+        <div><img src="i8.jpeg" alt="" class="data-img"></div>
+        <div class="data-name">Farms</div>
+    </div>
+
+
+    <div class="data">
+        <div><img src="i9.jpeg" alt="" class="data-img"></div>
+        <div class="data-name">Amazing views</div>
+    </div>
+
+    <div class="data">
+        <div><img src="i10.jpeg" alt="" class="data-img"></div>
+        <div class="data-name">Lakefront</div>
+    </div>
+
+    <div class="data">
+        <div><img src="i11.jpeg" alt="" class="data-img"></div>
+        <div class="data-name">OMG!</div>
+    </div>
+</div>
+
+
+<!-- 3rd part -->
+
+<div class="flexbox">
+
+    <div class="feed">
+        <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTEzMTA4NzY0ODgzNzUzNjQzNw%3D%3D/original/1077cfcd-29d5-42b7-adab-19e0b620e492.jpeg?im_w=1440&im_q=highq" alt="" class="feed-img">
+        <div class="flex">
+            <div class="flex-data">Go VIP with Kevin Hart</div>
+            <div class="flex-host">Hosted by Kevin Hart</div>
+            <div class="flex-price">Coming 21 August</div>
+        </div>
+    </div>
+
+    <div class="feed">
+        <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTEyNjIzMTk3NDU3MjE4Nzg2NA%3D%3D/original/f4cbe542-3ce0-4c6f-a8f1-d2120c1b2420.jpeg?im_w=2560&im_q=highq" alt="" class="feed-img">
+        <div class="flex">
+            <div class="flex-data">Train at the X-Mansion</div>
+            <div class="flex-host">Hosted by Jubilee</div>
+            <div class="flex-price">RS 3,192 per guest</div>
+        </div>
+    </div>
+
+    <div class="feed">
+        <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTEyNjMyMzc5Mzc2MTc3OTEzMg%3D%3D/original/01819c16-43a1-4aee-9957-9edce6eb8e16.png?im_w=1440&im_q=highq" alt="" class="feed-img">
+        <div class="flex">
+            <div class="flex-data">Join a living room session with Doja</div>
+            <div class="flex-host">Hosted by Doja Cat</div>
+            <div class="flex-price">Coming October</div>
+        </div>
+    </div>
+
+    <div class="feed">
+        <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTEzMTA4OTQ5ODA0MDcwMTE4Mw%3D%3D/original/4f7a276e-9995-4b32-bda6-300de0619b25.png?im_w=1440&im_q=highq" alt="" class="feed-img">
+        <div class="flex">
+            <div class="flex-data">Stay in Prince's Purple Rain house</div>
+            <div class="flex-host">Hosted by Wendy and Lisa</div>
+            <div class="flex-price">Coming October</div>
+        </div>
+    </div>
+
+    <div class="feed">
+        <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTE2MjI1MjI0NDQ0MzYzMjM4Mg%3D%3D/original/ae3426d1-fba4-44d4-bed2-690426f25f7a.jpeg?im_w=1440&im_q=highq" alt="" class="feed-img">
+        <div class="flex">
+            <div class="flex-data">Open the Olympic Games at Musée d'Orsay</div>
+            <div class="flex-host">Hosted by Mathieu Lehanneur</div>
+            <div class="flex-price">Sold out</div>
+        </div>
+    </div>
+
+    <div class="feed">
+        <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTEyNTQ0NTEyMzEwMTI3NDg1MQ%3D%3D/original/bd73f0f8-9057-4bbc-ad70-1db13eb5c03f.png?im_w=1440&im_q=highq" alt="" class="feed-img">
+        <div class="flex">
+            <div class="flex-data">Wake up in the Musée d'Orsay</div>
+            <div class="flex-host">Hosted b Mathieu Lehanneur</div>
+            <div class="flex-price">Sold out</div>
+        </div>
+    </div>
+
+    <div class="feed">
+        <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTEzMTA4NjI3OTI1MjIxNDQyOA%3D%3D/original/bc989f2d-eca8-4bcf-a9b0-b70b8e685a64.jpeg?im_w=1440&im_q=highq" alt="" class="feed-img">
+        <div class="flex">
+            <div class="flex-data">Live like Bollywood star Janhvi Kapoor</div>
+            <div class="flex-host">Hosted by Janhvi Kapoor</div>
+            <div class="flex-price">Sold out</div>
+        </div>
+    </div>
+
+    
+    </div>
+
+    
+
+
+    <!-- 4th -->
+     <div class="nn">
+    <h1>Past experiences</h1>
+    <div class="flexbox">
+      
+        <div class="feed">
+            <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTEzMTA4MzUyMzk5Mjc3MDU5Nw%3D%3D/original/ced15ffe-0ab5-48cf-a189-dbdeaaf04387.jpeg?im_w=1440&im_q=highq" alt="" class="feed-img">
+            <div class="flex">
+                <div class="flex-data">Make core memories with Inside Out 2</div>
+                <div class="flex-host">Hosted by Joy</div>
+                <div class="flex-price">Sold out</div>
+            </div>
+        </div>
+    
+        <div class="feed">
+            <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTE0ODQ2MDI1NTE4MDMzOTQ4MQ%3D%3D/original/c92634d0-4964-439a-905d-b9129af14d34.jpeg?im_w=1440&im_q=highq" alt="" class="feed-img">
+            <div class="flex">
+                <div class="flex-data">Design your Incredibles Supersuit</div>
+                <div class="flex-host">Hosted by Edna Mode</div>
+                <div class="flex-price">Sold out</div>
+            </div>
+        </div>
+    
+        <div class="feed">
+            <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTEyNjI0NzUwMDUwMTg2Mzg5MA%3D%3D/original/99417998-fa44-4c75-ae77-287c1468977b.jpeg?im_w=1440&im_q=highq" alt="" class="feed-img">
+             <div class="flex">
+                <div class="flex-data">Go on tour with Feid</div>
+                <div class="flex-host">Hosted by Feid</div>
+                <div class="flex-price">Sold out</div>
+            </div>
+        </div>
+    
+        <div class="feed">
+            <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTEzMTA3NzgxMzcwNzcxOTUzNQ%3D%3D/original/872f434b-9348-4ff1-8c6f-754fdbab4010.jpeg?im_w=1440&im_q=highq" alt="" class="feed-img">
+             <div class="flex">
+                <div class="flex-data">Game with Khaby Lame</div>
+                <div class="flex-host">Hosted by Khab Lame</div>
+                <div class="flex-price">Sold out</div>
+            </div>
+        </div>
+    
+        <div class="feed">
+            <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTEzMTg2NzMzNDc0MDk1Nzg4NA%3D%3D/original/b676fc8d-8250-4df0-a7cb-728b0486e371.jpeg?im_w=1440&im_q=highq" alt="" class="feed-img">
+             <div class="flex">
+                <div class="flex-data">Crash at the X-Mansion</div>
+                <div class="flex-host">Hosted b Jubilee</div>
+                <div class="flex-price">Sold out</div>
+            </div>
+        </div>
+    
+        <div class="feed">
+            <img src="https://a0.muscache.com/im/pictures/hosting/Hosting-U3RheVN1cHBseUxpc3Rpbmc6MTEyMzIwMTE1Njc3Njg0MTIzOQ%3D%3D/original/fb9dcb8d-7fa5-402f-91ae-fa2a26e9f097.png?im_w=1440&im_q=highq" alt="" class="feed-img">
+             <div class="flex">
+                <div class="flex-data">Spend the night in the Ferrari Museum</div>
+                <div class="flex-host">Hosted by Marc Gené</div>
+                <div class="flex-price">Sold out</div>
+            </div>
+        </div>
+    
+        <div class="feed">
+            <img src="https://a0.muscache.com/im/pictures/miso/Hosting-881808599061267756/original/b16970cf-1d55-4edd-bb1f-e1735d0a228e.jpeg?im_w=1440&im_q=highq" alt="" class="feed-img"> <div class="flex">
+                <div class="flex-data">Shrek's Swamp</div>
+                <div class="flex-host">Host by Donkey</div>
+                <div class="flex-price">Sold out</div>
+            </div>
+        </div>
+    
+        <div class="feed">
+            <img src="https://a0.muscache.com/im/pictures/be0957a9-da56-47d6-89ca-223b6e75321a.jpg?im_w=1440&im_q=highq" alt="" class="feed-img">
+             <div class="flex">
+                <div class="flex-data">The Last Blockbuster</div>
+                <div class="flex-host">Hosted by Sandi</div>
+                <div class="flex-price">Sold out</div>
+            </div>
+        </div>
+    </div>
+
+    <!-- 5th -->
+     <div class="footer">
+        <div class="footer-heading">
+            <h2>Inspiration for future getaways</h2>
+            <div class="footer-title">
+                <div>Popular</div>
+                <div>Arts & culture</div>
+                <div>Outdoors</div>
+                <div>Mountains</div>
+                <div>Beach</div>
+                <div>PUnique stays</div>
+                <div>Categories</div>
+                <div>Things to do</div>
+            </div>
+        </div>
+
+        <div class="knowledge">
+            <div class="">
+                <div class="first">Canmore</div>
+                <div class="second">Apartment rentals</div>
+            </div>
+
+            <div class="">
+                <div class="first">Marbella</div>
+                <div class="second">Villa rentals</div>
+            </div>
+
+            <div class="">
+                <div class="first">Benalmadena</div>
+                <div class="second">House rentals</div>
+            </div>
+
+            <div class="">
+                <div class="first">Mijas</div>
+                <div class="second">House rentals</div>
+            </div>
+
+            <div class="">
+                <div class="first">Prescott</div>
+                <div class="second">Cabin rentals</div>
+            </div>
+            <div class="">
+                <div class="first">Scottsdale</div>
+                <div class="second">Mansion rentals</div>
+            </div>
+            <div class="">
+                <div class="first">Tucson</div>
+                <div class="second">Pet-friendly rentals</div>
+            </div>
+            <div class="">
+                <div class="first">Jasper</div>
+                <div class="second">Cabin rentals</div>
+            </div>
+            <div class="">
+                <div class="first">Mountain View</div>
+                <div class="second">Pet-friendly rentals</div>
+            </div>
+            <div class="">
+                <div class="first">Devonport</div>
+                <div class="second">Cottage rentals</div>
+            </div>
+            <div class="">
+                <div class="first">Mallacoota</div>
+                <div class="second">Pet-friendly rentals</div>
+            </div>
+            <div class="">
+                <div class="first">Ibiza</div>
+                <div class="second">Holiday rentals</div>
+            </div>
+            <div class="">
+                <div class="first">Anaheim</div>
+                <div class="second">Beach house rentals</div>
+            </div>
+            <div class="">
+                <div class="first">Monterey</div>
+                <div class="second">Cottage rentals</div>
+            </div>
+            <div class="">
+                <div class="first">Paso Robles</div>
+                <div class="second">Holiday rentals</div>
+            </div>
+            <div class="">
+                <div class="first">Santa Barbara</div>
+                <div class="second">Per-friendly rentals</div>
+            </div>
+        </div>
+
+<div class="about">
+    <div class="Hosting" >Support
+        <div class="support-d" >Help Centre</div>
+        <div class="support-d">AirCover</div>
+        <div class="support-d">Anti-discrimination</div>
+        <div class="support-d">Disability support</div>
+        <div class="support-d">Cancellaton options</div>
+        <div class="support-d">Reports neighbourhood concern</div>
+    </div>
+    <div class="Hosting">Hosting
+        <div class="support-d" >Airbnb your home</div>
+        <div class="support-d">AirCover for Hosts</div>
+        <div class="support-d">Hosting resources</div>
+        <div class="support-d">Community forum </div>
+        <div class="support-d">Hosting responsibilty</div>
+        <div class="support-d">Join free Hosting class</div>
+    </div>
+    <div class="Hosting">Airbnb
+        <div class="support-d" >Newsroom</div>
+        <div class="support-d">new features</div>
+        <div class="support-d">Carriers</div>
+        <div class="support-d">investors</div>
+        <div class="support-d">Airbnb Emergency</div>
+        
+    </div>
+</div>
+       
+
+     </div>
+
+</div>
+</body>
+</html>
